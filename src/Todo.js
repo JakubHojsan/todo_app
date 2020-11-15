@@ -1,14 +1,28 @@
-import React from 'react'
+import React from 'react';
+import { Avatar, List, ListItem, ListItemAvatar, ListItemIcon, ListItemText } from '@material-ui/core';
+import './Todo.css';
 
-function Todo() {
+function Todo(props) {
     return (
-        <div>
-            
-        </div>
+        <List className="todo_list">
+            <ListItem>
+                <ListItemAvatar>
+                    <Avatar>
+                    
+                    </Avatar>
+                </ListItemAvatar>
+
+                <ListItemText primary={props.text} secondary="Deadline ⏰" />
+
+            </ListItem>
+
+
+        </List>
     )
 }
 
 export default Todo
 
 //React functional component w/ an export. 
-//This is the todo component
+//This is the todo/text component
+//props passes anything to the component, in this case it will just be the title of the text. 
